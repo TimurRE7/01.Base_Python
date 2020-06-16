@@ -25,7 +25,7 @@ for key in product_dict:
     analysis_list = []
     for i in range(number):
         analysis_list.append(product_list[i][1][key])
-    analysis_dict[key] = list(set(analysis_list))
+    analysis_dict[key] = analysis_list
 
 for key in analysis_dict:
     print(f'{key}: {analysis_dict[key]}')
