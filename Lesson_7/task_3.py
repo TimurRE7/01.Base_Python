@@ -1,7 +1,6 @@
 class Cell:
     def __init__(self, quantity):
         self.quantity = int(quantity)
-        #self.result = result
 
     def __str__(self):
         return f'Результат операции {self.quantity * "*"}'
