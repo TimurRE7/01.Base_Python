@@ -18,9 +18,8 @@ class Cell:
         return self.result
 
     def __truediv__(self, other):
-        self.result = Cell(round(self.quantity // other.quantity))
+        self.result = Cell(round(self.quantity / other.quantity))
         return self.result
-
 
     def make_order(self, cells_in_row):
         row = ''
@@ -29,11 +28,12 @@ class Cell:
         row += f'{"*" * (self.quantity % cells_in_row)}'
         return row
 
-cells_1 = Cell(5)
-cells_2 = Cell(2)
+
+cells_1 = Cell(10)
+cells_2 = Cell(5)
 print(cells_1)
 print(cells_1 + cells_2)
-print(cells_2 - cells_1)
-print(cells_2.make_order(5))
-print(cells_1.make_order(10))
+print(cells_1 - cells_2)
+print(cells_1.make_order(2))
+print(cells_2.make_order(3))
 print(cells_1 / cells_2)
